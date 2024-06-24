@@ -26,9 +26,9 @@ from scgallery.targets.gf180 import (
     gf180mcu_fd_sc_mcu7t5v0 as gf180_gf180mcu_fd_sc_mcu7t5v0
 )
 
-from scgallery.rules import check_rules
-from scgallery import report
 from scgallery import __version__
+
+from scgallery.checklists import asicflow_rules
 
 
 class Gallery:
@@ -491,6 +491,9 @@ class Gallery:
 
         rules_files = self.__designs[design]['rules']
 
+        chip.use(asicflow_rules)
+        assert chip.check_checklist('asicflow_rules', verbose=True)
+
         if rules_files:
             chip.logger.info(f"Checking rules in: {', '.join(rules_files)}")
             errors = check_rules(chip, rules_files)
@@ -875,7 +878,7 @@ Designs: {designs_help}
                                     new_config[key] = value
 
             with open(args.json, 'w') as f:
-                f.write(json.dumps(matrix, indent=4, sort_keys=True))
+                json.dump(matrix, f, indent=4, sort_keys=True)
             return 0
 
         if not gallery.run():

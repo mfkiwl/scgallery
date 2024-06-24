@@ -1,0 +1,362 @@
+{
+    "final_timing": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "setupslack",
+                "operator": ">=",
+                "value": null,
+                "update": {
+                    "padding": 0.1,
+                    "margin": null,
+                    "bounds": {}
+                }
+            },
+            {
+                "metric": "holdslack",
+                "operator": ">=",
+                "value": null,
+                "update": {
+                    "padding": 0.1,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    },
+    "final_irdrop": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "irdrop",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 0.1,
+                    "margin": null,
+                    "bounds": {"min": 0}
+                }
+            }
+        ]
+    },
+    "fmax": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "fmax",
+                "operator": ">=",
+                "value": null,
+                "update": {
+                    "padding": 0.1,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    },
+    "final_cellarea": {
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "description": null,
+        "criteria": [
+            {
+                "metric": "cellarea",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 0.15,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    },
+    "final_utilization": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "utilization",
+                "operator": ">=",
+                "value": null,
+                "update": {
+                    "padding": 0.1,
+                    "margin": null,
+                    "bounds": {"min": 0, "max": 100}
+                }
+            },
+            {
+                "metric": "utilization",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 0.25,
+                    "margin": null,
+                    "bounds": {"min": 0, "max": 100}
+                }
+            }
+        ]
+    },
+    "routing_drcs": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "route",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "drvs",
+                "operator": "==",
+                "value": null,
+                "update": {
+                    "padding": null,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    },
+    "runtime_syn": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "syn",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_floorplan": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "floorplan",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_place": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "place",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_cts": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "cts",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_route": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "route",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_dfm": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "dfm",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_write_data": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "runtime_write_gds": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_gds",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "exetime",
+                "operator": "<=",
+                "value": null,
+                "update": {
+                    "padding": 2.0,
+                    "margin": null,
+                    "bounds": {"min": 60}
+                }
+            }
+        ]
+    },
+    "errors": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "*",
+                "index": "*"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "errors",
+                "operator": "==",
+                "value": 0,
+                "update": {
+                    "padding": null,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    },
+    "warnings": {
+        "description": null,
+        "nodes": [
+            {
+                "step": "write_data",
+                "index": "0"
+            },
+            {
+                "step": "write_gds",
+                "index": "0"
+            }
+        ],
+        "criteria": [
+            {
+                "metric": "warnings",
+                "operator": "==",
+                "value": 0,
+                "update": {
+                    "padding": null,
+                    "margin": null,
+                    "bounds": {}
+                }
+            }
+        ]
+    }
+}
