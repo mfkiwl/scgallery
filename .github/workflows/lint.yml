@@ -126,4 +126,6 @@ jobs:
       - name: Run lint
         run: |
           . .venv/bin/activate
+          mkdir lint
+          cd lint
           sc-gallery -lint -lint_tool ${{ matrix.tool }}
